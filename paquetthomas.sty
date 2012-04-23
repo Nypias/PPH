@@ -1,0 +1,167 @@
+%------------------------------------------------------------
+%
+%            CHARGEMENT DES PACKAGES NECESSAIRES
+%
+%------------------------------------------------------------
+% LINUX
+\usepackage[utf8]{inputenc}
+
+% WINDOWS
+\usepackage[T1]{fontenc}  % Cause mauvais affichage du PDF r?sultant en PDFLATEX compilation
+                          % si non rajouter \usepackage[latin1]{inputenc} et enlever celui la
+%\usepackage[latin1]{inputenc}
+
+
+%\usepackage{times}
+\usepackage[french]{babel}
+%\usepackage{overpic}
+%\usepackage{amssymb}
+\usepackage{amsmath,upref}
+\usepackage{multirow}
+
+% Bibliographie
+\usepackage[nottoc, notlof, notlot]{tocbibind}
+
+%\usepackage{epsfig}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{listings}
+%\usepackage{amsmath}
+\usepackage{here}
+\usepackage{float}
+%\usepackage{lscape}
+\usepackage{fancybox}
+%\usepackage{fancyhdr}
+%\usepackage{subeqnarray}
+
+
+%\usepackage{subfigure,relsize}
+%\usepackage{algorithm}
+%\usepackage{algorithmic}
+%\usepackage{apacite}
+%\usepackage{afterpage}
+%\usepackage{minitoc}
+%\usepackage{shortvrb}
+%\usepackage{psfrag}
+%
+%
+\usepackage{subeqnarray,color}
+\usepackage{amsfonts}
+%\usepackage{latexsym}
+%\usepackage[square,numbers]{natbib}
+%\usepackage[numbers]{natbib}
+%\usepackage[dcucite]{harvard}
+%\usepackage{showkeys}
+
+%----------------------- D?finition des marges ---------------------
+%%\setlength{\parindent}{0pt}
+%%\setlength{\hoffset}{-0.04cm}
+%%\setlength{\oddsidemargin}{0cm}  % Marge gauche sur pages impaires   1.2
+%%\setlength{\evensidemargin}{0cm} % Marge gauche sur pages paires     0.6
+%%\setlength{\marginparwidth}{54pt} % Largeur de note dans la marge
+%%\setlength{\textwidth}{17cm} % Largeur de la zone de texte (17cm)
+%%\setlength{\voffset}{-0.64cm} % Bon pour DOS
+%%\setlength{\marginparsep}{7pt} % S?paration de la marge
+%%\setlength{\topmargin}{-1cm}  % Pas de marge en haut
+%%\setlength{\headheight}{0.5cm} % Haut de page
+%%\setlength{\headsep}{1cm} % Entre le haut de page et le texte
+%%%\setlength{\footskip}{1cm} % Pied de page + s?paration
+%%\setlength{\topskip}{1cm} % Pied de page + s?paration
+%%\setlength{\textheight}{25cm} % Hauteur de la zone de texte
+%%\setlength{\headwidth}{\textwidth}
+%
+\setlength{\parindent}{0.5cm}
+\setlength{\hoffset}{-1.5cm}
+\setlength{\oddsidemargin}{1.5cm}  % Marge gauche sur pages impaires   1.2
+\setlength{\evensidemargin}{1.5cm} % Marge gauche sur pages paires     0.6
+\setlength{\marginparwidth}{54pt} % Largeur de note dans la marge
+\setlength{\textwidth}{17cm} % Largeur de la zone de texte (17cm)
+\setlength{\voffset}{-1.5cm} % Bon pour DOS
+\setlength{\marginparsep}{7pt} % S?paration de la marge
+\setlength{\topmargin}{0pt}  % Pas de marge en haut
+\setlength{\headheight}{1cm} % Haut de page
+\setlength{\headsep}{.5cm} % Entre le haut de page et le texte
+\setlength{\footskip}{1cm} % Pied de page + s?paration
+\setlength{\topskip}{0cm} % Pied de page + s?paration
+\setlength{\textheight}{24.7cm} % Hauteur de la zone de texte
+%\setlength{\headwidth}{\textwidth}
+%
+%%--- D?finition des marges ----
+%%\oddsidemargin -0.8 cm %
+%%\evensidemargin -0.8 cm %
+%%\textwidth 17 cm %
+%%\topmargin -1 cm
+%%\textheight 23 cm
+%
+%%-------------------------- l'interlignage ------------------------------
+\setlength{\baselineskip}{15pt} \small\normalsize
+\renewcommand{\baselinestretch}{1.3} \small \normalsize
+%
+%%\setcounter{tocdepth}{3}   % prendre en consid?ration les sous sous section dans le sommaire
+%%----------------------------
+%%\newenvironment{alphalist}[2][]%
+%%{\begin{flushleft}[\Alph]}
+%%{\end{flushleft}}
+%%------------------- ent?te et pied de page [ version RECTO ]------------------------
+%\pagestyle{fancy}
+%\lhead{\scriptsize Nicolas CARLESI}
+%\chead{}
+%\rhead{\scriptsize{\leftmark}}
+%
+%\lfoot{\footnotesize \it Analyse et mod?lisation fonctionnelle de l'avionique d'une fus?e-sonde PERSEUS}
+%\cfoot{}%\footnotesize \it Commande pour la stabilisation de mouvements p?riodiques\\ d'un robot sauteur planaire unijambiste}
+%\rfoot{\thepage}
+%
+%\renewcommand{\headrulewidth}{1pt}
+%%------------------- ent?te et pied de page [ version RECTO-VERSO ]------------------------
+%%\pagestyle{fancy}
+%%
+%%%% en-t?te de page  % O : impaire  E : paire
+%%\fancyhead{} \fancyhead[LO]{\footnotesize \sffamily \nouppercase{\leftmark}}
+%%\fancyhead[CO]{} \fancyhead[RO,LE]{ } \fancyhead[RE]{\footnotesize \sffamily
+%%\nouppercase{\rightmark}} \fancyhead[CE]{}
+%%
+%%%% pied de page
+%%\fancyfoot[LO]{\footnotesize \it Recherche de sous-structures arborescentes fr?quentes
+%%avec des contraintes d'inclusion floue} \fancyfoot[RE]{\small \it xxxxx YYYYYY}
+%%\fancyfoot[RO,LE]{\thepage} \fancyfoot[CO]{} \fancyfoot[CE]{}
+%%\renewcommand{\headrulewidth}{0.9pt}
+%%-------------------------------------------------------------------
+%\newtheorem{rem}{\bf Remarque}
+%\newtheorem{hyp}{\bf Hypoth?se}
+%\newtheorem{definition}{\bf D?finition}
+%\newtheorem{proposition}{\bf Proposition}
+%\newtheorem{lem}{\bf Lemme}
+%%------------------- D?finition de nouvelles commandes ----------------
+%\def\rref#1{{\rm (\ref{#1})}}
+%\newcommand\mR{\mathbb{R}}
+%\newcommand{\defeq}{:=}
+%\newcommand{\mat}[1]{\begin{pmatrix}
+%#1
+%\end{pmatrix}}
+
+
+%----------------------Definition pour listings ------------------------
+\lstset{ %
+language=SQL,                % choose the language of the code
+basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+numbers=left,                   % where to put the line-numbers
+numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+stepnumber=1,                   % the step between two line-numbers. If it's 1 each line 
+                                % will be numbered
+numbersep=5pt,                  % how far the line-numbers are from the code
+%backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+showspaces=false,               % show spaces adding particular underscores
+showstringspaces=false,         % underline spaces within strings
+showtabs=false,                 % show tabs within strings adding particular underscores
+frame=single,	                % adds a frame around the code
+tabsize=2,	                	% sets default tabsize to 2 spaces
+captionpos=b,                   % sets the caption-position to bottom
+breaklines=true,                % sets automatic line breaking
+breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+title=\lstname,                 % show the filename of files included with \lstinputlisting;
+                                % also try caption instead of title
+escapeinside={\%*}{*)},         % if you want to add a comment within your code
+morekeywords={*,...}            % if you want to add more keywords to the set
+}
+
