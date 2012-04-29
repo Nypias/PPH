@@ -1,18 +1,22 @@
 \documentclass[a4paper, 11pt]{report}
 \usepackage{paquetthomas}
 
-\title{Difficultés de réinsertion professionnelle des personnes handicapées\\ Projet Personnel des Humanités}
-\date{\today}
-\author{Thomas FATTAL}
-
 \begin{document}
-\maketitle
+\include{pagegarde}
 
+\pagenumbering{roman}
+
+\include{remerciements}
+\setcounter{tocdepth}{3}
 \tableofcontents
 
 \clearpage
 
+\pagenumbering{arabic}
+
 \include{introduction}
+
+\include{handicap_emploi}
 
 \include{methodologie}
 
@@ -20,11 +24,15 @@
 
 \include{discussion}
 
-%\include{causesEntreprise}
+\include{conclusion}
 
 
+\appendix
+\pagenumbering{roman}
+\include{annexe}
 
-\bibliographystyle{plain}
+
+\bibliographystyle{unsrt}
 \bibliography{biblio}
 
 
